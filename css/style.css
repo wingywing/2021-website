@@ -30,10 +30,8 @@
     font-style: italic;
 }
 @font-face {
-    font-family: 'HelveticaRounded', Arial, sans-serif;
+    font-family: HelveticaRoundedBold;
     src: url('../fonts/HelveticaRoundedBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
 }
 
 /* font styles */
@@ -43,17 +41,28 @@
     --bg-color: #FFFAF3;
     --light-color: #EEEEEE;
     background-color: var(--bg-color);
+    font-size: 18px;
 }
 
 .logo {
     font-family: 'Asap';
-    font-size: 30px;
+    font-size: 1.667rem;
     color: var(--emphasis-color)
 }
 
 h1{
     margin: 0px;
     padding: 0px;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Asap';
+    font-size: 2.778rem;
+    font-size: clamp(1.8rem, 11vw, 5rem);
+    color: var(--emphasis-color);
+    text-align: center;
 }
 
 p {
@@ -80,6 +89,7 @@ a:hover {
 }
 
 /* Mobile site */
+
     /* Grid container - Modified code from https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/ */
         .webgrid {
             display: grid;
@@ -120,7 +130,7 @@ a:hover {
             position: absolute;
             left: calc(2.056rem + 10px);
         }
-        button {
+        .hamburger {
             position: absolute;
             right: calc(2.056rem + 10px);
             border: none;
@@ -134,7 +144,7 @@ a:hover {
             display: block;
             width: 25px;
             height: 3px;
-            margin: 5px auto;
+            margin: 5px 0 0 0;
             -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
             background-color: var(--emphasis-color);
@@ -182,6 +192,11 @@ a:hover {
             transition: 0.3s ease-in-out;
         }
 
+        .hamburger {
+            margin: 0;
+            padding: 0;
+        }
+
         .hamburger.active .bar:nth-child(2) {
             transform: translateY(8px) rotate(45deg);
         }
@@ -194,3 +209,48 @@ a:hover {
             opacity: 0;
             transform: translateY(0px) rotate(0deg);
         }
+        #hello {
+            display:block;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .home-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .main {
+            padding: 2rem 0 0 0;
+        }
+        .main ul {
+            margin: 0px;
+            padding: 2rem 0 0 0;
+            text-align: center;
+        }
+        .main ul li {
+            font-style: normal;
+            list-style-type: none;
+            display: inline-block;
+            font-family: 'HelveticaRoundedBold';
+            font-size: 1.111rem;
+            color: var(--emphasis-color);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        .icon {
+            background-color: transparent;
+            border: none;
+            padding: 0 20px;
+            font-size: 50px;
+            color: var(--main-color);
+            cursor: pointer;
+        }
+        .fab {
+            color: var(--main-color);
+            cursor: pointer;
+        }
+
+
