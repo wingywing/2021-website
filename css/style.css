@@ -1,0 +1,196 @@
+/* Font imports */
+@font-face {
+    font-family: 'Helvetica', Arial, sans-serif;
+    src: url('../fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica', Arial, sans-serif;
+    src: url('../fonts/HelveticaBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica', Arial, sans-serif;
+    src: url('../fonts/HelveticaBoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Helvetica', Arial, sans-serif;
+    src: url('../fonts/HelveticaLight.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica', Arial, sans-serif;
+    src: url('../fonts/HelveticaOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'HelveticaRounded', Arial, sans-serif;
+    src: url('../fonts/HelveticaRoundedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* font styles */
+:root {
+    --emphasis-color: #706F6F;
+    --main-color: #A2A2A2; 
+    --bg-color: #FFFAF3;
+    --light-color: #EEEEEE;
+    background-color: var(--bg-color);
+}
+
+.logo {
+    font-family: 'Asap';
+    font-size: 30px;
+    color: var(--emphasis-color)
+}
+
+h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    font-family: 'Helvetica';
+    font-size: 18;
+    color: var(--main-color)
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--emphasis-color);
+    font-family: 'Helvetica';
+    font-size: 1.4rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--main-color)
+}
+
+/* Mobile site */
+    /* Grid container - Modified code from https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/ */
+        .webgrid {
+            display: grid;
+            grid-template-columns: 
+                [full-start] /* Full represents images that break out of the center grid*/
+                2.056rem 
+                [main-start]
+                repeat(4, 1fr) 
+                [main-end]
+                2.056rem
+                [full-end];
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+            margin: 0px;
+        }
+
+        .webgrid > * {
+            grid-column: main-start / main-end;
+        }
+
+        .webgrid > .full {
+            grid-column: full-start / full-end;
+        }
+    /* Navbar */
+        .header {
+            background-color: var(--bg-color);
+            padding-top: 2.056rem;
+            height: 4rem;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            position: absolute;
+            left: calc(2.056rem + 10px);
+        }
+        button {
+            position: absolute;
+            right: calc(2.056rem + 10px);
+            border: none;
+            background: none;
+            color: none;
+            cursor: pointer;
+            /* display: none; */
+          }
+        
+        .bar{
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--emphasis-color);
+        }
+
+        button:focus,
+        button:hover {
+        color: var(--main-color);
+        }
+        nav {
+            border-top: 1px solid var(--light-color);
+            margin: 4rem 2.056rem auto 2.056rem;
+            display: block;
+            visibility: hidden;
+            opacity: 0%;
+            -webkit-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+        }
+        nav li{
+            font-style: normal;
+            list-style-type: none;
+            text-align: right;
+            padding: 1em;
+            translate: 0 -100px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        nav.is-active {
+            display: block;
+            visibility: visible;
+            opacity: 100%;
+            color: var(--bg-color);
+            -webkit-transition: opacity0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+          }
+        .header.is-active{
+            height: 18rem;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+        nav li.is-active {
+            translate: 0 0;
+            color: var(--emphasis-color);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            transform: translateY(8px) rotate(45deg);
+        }
+    
+        .hamburger.active .bar{
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    
+        .hamburger.active .bar:nth-child(3) {
+            opacity: 0;
+            transform: translateY(0px) rotate(0deg);
+        }
