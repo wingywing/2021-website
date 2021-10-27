@@ -102,8 +102,12 @@ a:hover {
                 2.056rem
                 [full-end];
             gap: 10px;
-            grid-auto-rows: minmax(100px, auto);
-            margin: 0px;
+            margin: 0;
+            grid-template-areas: 
+            "header header header header header header"
+            ". main main main main ."
+            "footer footer footer footer footer footer"
+            ;
         }
 
         .webgrid > * {
@@ -120,6 +124,7 @@ a:hover {
             height: 4rem;
             -webkit-transition: 0.3s ease-in-out;
             transition: 0.3s ease-in-out;
+            grid-area: header;
         }
         .navbar {
             display: flex;
@@ -216,6 +221,7 @@ a:hover {
         .main {
             display: flex;
             flex-direction: column;
+            grid-area: main;
         }
 
         .home-left {
@@ -229,6 +235,7 @@ a:hover {
             margin: 0px;
             padding: 2rem 0 0 0;
             text-align: center;
+            white-space:nowrap
         }
         .main ul li {
             font-style: normal;
@@ -252,5 +259,35 @@ a:hover {
             color: var(--main-color);
             cursor: pointer;
         }
-
+        .hero-img {
+            max-width: 100%;
+            text-align: center;
+            padding: 1rem 0 2rem 0;
+        }
+        footer {
+            text-align: center;
+            grid-area: footer;
+            padding: 0 0 1rem 0;
+        }
+        footer p{
+            text-align: center;
+            font-size: 0.833rem;
+            color: var(--emphasis-color);
+            font-family: Helvetica;
+            padding: 0;
+            margin: 0 0 0 0;
+        }
+        .footer-list {
+            padding: 0 0 0 0;
+            margin: 5px 0 0 0;
+        }
+        .footer-list li{
+            font-style: normal;
+            list-style-type: none;
+            display: inline-block;
+            font-family: Helvetica;
+        }
+        .footer-list li a{
+            font-size: 0.833rem;
+        }
 
