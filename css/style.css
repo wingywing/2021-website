@@ -509,7 +509,8 @@ a:hover {
     }
     .projectSubtitle {
         grid-area: date;
-        margin: 0;
+        margin: 0 0 .4rem 0;
+        font-size: clamp(1.8rem, 4vw, 1rem);
     }
     .projectImg {
         grid-area: img;
