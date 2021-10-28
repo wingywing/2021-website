@@ -226,12 +226,21 @@ a:hover {
             grid-area: main;
         }
 
+        .designmain {
+            display: flex;
+            flex-direction: column;
+            grid-area: main;
+        }
+
         .home-left {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         .main {
+            padding: 2rem 0 0 0;
+        }
+        .designmain {
             padding: 2rem 0 0 0;
         }
         .main ul {
@@ -294,6 +303,44 @@ a:hover {
         .footer-list li a{
             font-size: 0.833rem;
         }
+        /* ProjectPage */
+        .designmain {
+            padding-top: 2rem;
+        }
+        .projectlist {
+            list-style-position:outside;
+            /* font-size: 2.778rem; */
+            font-size: clamp(1.8rem, 11vw, 2.778rem);
+            font-family: 'Asap';
+            color:var(--main-color);
+        }
+        .projectlist ol {
+            margin: 0;
+        }
+
+        .projectlist ol li {
+            margin: 0 0 2rem 0;
+        }
+
+        .projectTitle {
+            text-align: left;
+        }
+        .projectTitle a{
+            /* font-size: 2.778rem; */
+            font-size: clamp(1.8rem, 11vw, 2.778rem);
+            font-family: 'Asap';
+            display: block;
+        }
+        .projectSubtitle {
+            margin-top: .5rem;
+            /* font-size: 1.111rem; */
+            font-size: clamp(1rem, 1vw, 1.111rem);
+            font-family: 'HelveticaRoundedBold';
+            color:var(--emphasis-color);
+        }
+        .bigbreak {
+            display: none;
+        }
 @media  screen and (min-width: 740px) {
         
     .webgrid {
@@ -315,6 +362,7 @@ a:hover {
     .main {
         padding-top: 2rem;
     }
+
 
     .header {
         display: flex;
@@ -359,6 +407,11 @@ a:hover {
         color: white;
         border: 1px solid var(--main-color);
     }
+    .activePage {
+        background-color: var(--emphasis-color);
+        color: white;
+        border: 1px solid var(--emphasis-color);
+    }
     #menu {
         position: relative;
         right: 0;
@@ -370,8 +423,15 @@ a:hover {
         left: 0;
     }
 
+    /* project page */
+    .designmain {
+        padding-top: 4rem;
+    }
 }
 @media  screen and (min-width: 992px) {
+    .bigbreak {
+        display: block;
+    }
     .footer {
         display: flex;
         flex-direction: row;
@@ -401,6 +461,7 @@ a:hover {
     }
     .hero-img {
         grid-area: hero;
+        padding-top: 0;
     }
     .main {
         display: grid;
@@ -410,16 +471,62 @@ a:hover {
             [main-end];
         gap: 16px;
         margin: 0;
+        padding-top: 0;
         grid-template-areas: 
         "left left left left left . hero hero hero hero hero hero"
         ;
         grid-area: main;
     }
-
     .main ul {
         text-align: left;
     }
     h2 {
         text-align: left;
+    }
+    /* design page */
+
+    .projectgrid {
+        font-size: 4.444rem;
+        display: grid;
+        grid-template-columns: 
+            [main-start]
+            repeat(12, 1fr) 
+            [main-end];
+        gap: 16px;
+        margin: 0;
+        grid-template-areas: 
+        "title title title title date . img img img img img img"
+        ;
+        align-items: flex-end;
+        margin: 1rem 0 6rem 0;
+    }
+
+    .projectlist {
+        grid-area: list;
+    }
+    .projectlist ol li::marker{
+        font-size: clamp(1.8rem, 4vw, 4.444rem);
+    }
+    .projectSubtitle {
+        grid-area: date;
+        margin: 0;
+    }
+    .projectImg {
+        grid-area: img;
+    }
+    .projectTitle {
+        padding-top: 0;
+        grid-area: title;
+    }
+
+    .projectTitle a {
+        font-size: clamp(1.8rem, 4vw, 4.444rem);
+    }
+
+    .projectlist {
+    list-style-position:outside;
+    font-size: 2.778rem;
+    font-family: 'Asap';
+    color:var(--main-color);
     }
 }
