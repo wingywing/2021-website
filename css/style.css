@@ -295,22 +295,49 @@ a:hover {
             font-size: 0.833rem;
         }
 @media  screen and (min-width: 740px) {
+        
+    .webgrid {
+        grid-template-columns: 
+        [full-start] /* Full represents images that break out of the center grid*/
+        .3fr
+        [main-start]
+        repeat(4, 1fr) 
+        [main-end]
+        .3fr
+        [full-end];
+        gap: 0;
+        grid-template-areas:
+        " . header header header header . "
+        " . main main main main . "
+        " . footer footer footer footer . "
+        ;
+    }
+    .main {
+        padding-top: 2rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .hamburger {
         display: none;
-    }
-    nav{
-        visibility: visible;
-        opacity: 100%;
     }
     nav ul {
         display: block;
     }
     nav {
+        visibility: visible;
+        opacity: 100%;
         border-top: none;
+        margin: 0;
+        padding: 0;
     }
     nav ul li {
         display: inline-block;
         padding: 0em 0 0em 1em;
+        translate: 0;
         
     }
     .main ul li {
@@ -333,30 +360,18 @@ a:hover {
         border: 1px solid var(--main-color);
     }
     #menu {
-        position: absolute;
-        right: calc(2.056rem + 10px);
-        margin-top: 4.9rem;
+        position: relative;
+        right: 0;
+        margin-top: 0;
+        padding: 0;
+    }
+    .logo {
+        position: relative;
+        left: 0;
     }
 
 }
 @media  screen and (min-width: 992px) {
-    
-    .webgrid {
-        grid-template-columns: 
-        [full-start] /* Full represents images that break out of the center grid*/
-        .3fr
-        [main-start]
-        repeat(4, 1fr) 
-        [main-end]
-        .3fr
-        [full-end];
-        gap: 0;
-        grid-template-areas:
-        " . header header header header . "
-        " . main main main main . "
-        " . footer footer footer footer . "
-        ;
-    }
     .footer {
         display: flex;
         flex-direction: row;
@@ -398,7 +413,6 @@ a:hover {
         grid-template-areas: 
         "left left left left left . hero hero hero hero hero hero"
         ;
-        padding: 0;
         grid-area: main;
     }
 
