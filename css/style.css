@@ -110,6 +110,7 @@ a:hover {
             ". main main main main ."
             "footer footer footer footer footer footer"
             ;
+            min-height: 100vh;
         }
 
         .webgrid > * {
@@ -119,6 +120,7 @@ a:hover {
         .webgrid > .full {
             grid-column: full-start / full-end;
         }
+        
     /* Navbar */
         .header {
             background-color: var(--bg-color);
@@ -127,6 +129,7 @@ a:hover {
             -webkit-transition: opacity 0.3s ease-in-out;
             transition: opacity 0.3s ease-in-out;
             grid-area: header;
+            grid-auto-rows: min-content;
         }
         .navbar {
             display: flex;
@@ -278,9 +281,11 @@ a:hover {
             padding: 1rem 0 2rem 0;
         }
         footer {
+            grid-auto-rows: min-content;
             text-align: center;
             grid-area: footer;
             padding: 0 0 1rem 0;
+            align-self: end;
         }
         footer p{
             text-align: center;
@@ -303,7 +308,7 @@ a:hover {
         .footer-list li a{
             font-size: 0.833rem;
         }
-        /* ProjectPage */
+        /* DesignPage */
         .designmain {
             padding-top: 2rem;
         }
@@ -324,6 +329,9 @@ a:hover {
 
         .projectTitle {
             text-align: left;
+            font-size: clamp(1.8rem, 11vw, 2.778rem);
+            font-family: 'Asap';
+            display: block;
         }
         .projectTitle a{
             /* font-size: 2.778rem; */
@@ -334,12 +342,81 @@ a:hover {
         .projectSubtitle {
             margin-top: .5rem;
             /* font-size: 1.111rem; */
-            font-size: clamp(1rem, 1vw, 1.111rem);
+            font-size: clamp(1.5rem, 1vw, 1.111rem);
             font-family: 'HelveticaRoundedBold';
             color:var(--emphasis-color);
         }
         .bigbreak {
             display: none;
+        }
+        /* ProjectPage */
+        .projectWebgrid {
+            grid-template-areas: 
+            "header header header header header header"
+            "content content content content content content"
+            "footer footer footer footer footer footer"
+            ;
+            grid-auto-rows: min-content;
+        }
+        .projectMain {
+            grid-area: content;
+            display: grid;
+            grid-template-columns: 
+            [full-start] /* Full represents images that break out of the center grid*/
+            2.056rem 
+            [main-start]
+            repeat(4, 1fr) 
+            [main-end]
+            2.056rem
+            [full-end];
+        gap: 10px;
+        margin: 0;
+        }
+
+        .projectMain > * {
+            grid-column: main-start / main-end;
+        }
+
+        .projectMain > .full {
+            grid-column: full-start / full-end;
+        }
+
+        .projectHeading {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            grid-template-areas: 
+            "back heading heading heading "
+            "back subheading subheading . "
+            ;
+            
+        }
+
+        .backIcon {
+            margin: 0;
+            padding: 0;
+            grid-area: back;
+            justify-self: left;
+            max-height: fit-content;
+        }
+
+        .projT{
+            grid-area: heading;
+            align-self: end;
+            font-size: clamp(1.8rem, 10vw, 2.778rem);
+        }
+
+        .projectSt {
+            grid-area: subheading;
+            align-self: start;
+            margin: 0;
+            padding: 0;
+            font-size: clamp(1rem, 1vw, 1.111rem);
+        }
+
+        .projHero {
+            height: auto;
+            width: 100%;
         }
 @media  screen and (min-width: 740px) {
         
@@ -359,6 +436,19 @@ a:hover {
         " . footer footer footer footer . "
         ;
     }
+
+    .projectMain {
+        grid-template-columns: 
+        [full-start] /* Full represents images that break out of the center grid*/
+        .3fr
+        [main-start]
+        repeat(4, 1fr) 
+        [main-end]
+        .3fr
+        [full-end];
+        gap: 0;
+    }
+
     .main {
         padding-top: 2rem;
     }
@@ -423,10 +513,32 @@ a:hover {
         left: 0;
     }
 
-    /* project page */
+    /* design page */
     .designmain {
         padding-top: 4rem;
     }
+
+    /* project page  */
+    .projectWebgrid {
+        grid-template-columns: 
+        [full-start] /* Full represents images that break out of the center grid*/
+        .3fr
+        [main-start]
+        repeat(4, 1fr) 
+        [main-end]
+        .3fr
+        [full-end];
+        gap: 0;
+        grid-template-areas:
+        " . header header header header . "
+        " content content content content content content "
+        " . footer footer footer footer . "
+        ;
+    }
+    .projectHeading {
+        margin: 3.5rem 0 2rem 0;
+    }
+
 }
 @media  screen and (min-width: 992px) {
     .bigbreak {
@@ -499,6 +611,7 @@ a:hover {
         ;
         align-items: flex-end;
         margin: 1rem 0 6rem 0;
+        grid-auto-rows: min-content;
     }
 
     .projectlist {
@@ -529,5 +642,34 @@ a:hover {
     font-size: 2.778rem;
     font-family: 'Asap';
     color:var(--main-color);
+    }
+    
+
+    /* project page */
+    .projT{
+        grid-area: heading;
+        align-self: center;
+        font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    .projSt {
+        grid-area: subheading;
+        align-self: end;
+        margin-bottom: .5rem;
+    }
+
+    .backIcon {
+        margin: 0;
+        padding: 0;
+    }
+
+    .projectHeading {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        margin: 3.5rem 0 3rem 0;
+        grid-template-areas: 
+        " back heading heading heading heading subheading . . . . . . "
+        ;
+        grid-auto-rows: min-content;
     }
 }
