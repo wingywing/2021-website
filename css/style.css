@@ -701,4 +701,21 @@ a:hover {
         ;
         grid-auto-rows: min-content;
     }
+    .projImg {
+        width: 100%;
+        grid-column: main-start / main-end;
+        position: relative;
+        border-radius: 40px;
+        z-index: -2;
+    }
+
+
+    .shadow {
+        margin-top: 2em;
+        box-shadow: inset 0px 3px 6px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 40px;
+
+    }
+
+    
 }
