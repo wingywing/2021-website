@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- 
+    hi.
+    Coded with love by Wing Pang
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wing Pang</title>
+    <meta name="description"
+        content="My portfolio.">
+    <meta name="author" content="Wing">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typefaces -->
+        <!-- ASAP - Used for logotype -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet"> 
+        <!-- Helvetica Rounded -->
+        <script src="https://kit.fontawesome.com/c065e06c81.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <!-- Grid container -->
+    <div class="webgrid">
+        <!-- Header and navbar - modified from https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci and https://www.a11ymatters.com/pattern/mobile-nav/-->
+        <header class="header">
+            <h1>
+                 <a href="index.html" class="logo">Wing&nbsp;Pang</a> 
+            </h1>
+
+            <button id="toggle" class="hamburger"> <p style="width:0px; height: 0px; color: transparent; padding: 0px; margin: 0px;">Menu</p>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="/design.html">Design</a></li>
+                    <li><a href="/illustration.html">Illustration</a></li>
+                    <li><a href="/about.html" class="activePage">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main body container -->
+        <div class="main">
+            <div class="home-left">
+                <h2 id="hello">Work in Progress</h2>
+            </div>
+        </div>
+
+        <!-- Footer container -->
+        <footer class="footer ">
+            <p>Copyright ©  <script>document.write( new Date().getFullYear() );</script>  Wing Pang</p>
+            <ul class="footer-list">
+                <li><a href="https://www.instagram.com/wing.png">Instagram</a> - </li> 
+                <li><a href="https://au.linkedin.com/in/wingy">LinkedIn</a> - </li> 
+                <li><a href="mailto:hello@wingpang.com">Email</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

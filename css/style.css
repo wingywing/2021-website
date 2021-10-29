@@ -740,5 +740,9 @@ a:hover {
     .sectionCopy {
         grid-area: sectionCopy;
     }
+
+    .projectMain {
+        padding-bottom: 3rem;
+    }
     
 }
