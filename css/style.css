@@ -447,6 +447,10 @@ a:hover {
             margin: 0;
             text-align: center;
         }
+
+        .projectMain {
+            padding-bottom: 3rem;
+        }
 @media  screen and (min-width: 740px) {
         
     .webgrid {
@@ -568,6 +572,7 @@ a:hover {
         margin: 3.5rem 0 2rem 0;
     }
 
+    
 }
 @media  screen and (min-width: 992px) {
     .bigbreak {
@@ -741,8 +746,5 @@ a:hover {
         grid-area: sectionCopy;
     }
 
-    .projectMain {
-        padding-bottom: 3rem;
-    }
-    
+
 }
