@@ -709,6 +709,9 @@ a:hover {
         z-index: -2;
     }
 
+    .projectHero {
+        margin-bottom: 3rem;
+    }
 
     .shadow {
         margin-top: 2em;
@@ -717,5 +720,25 @@ a:hover {
 
     }
 
+    .section {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        grid-template-areas: 
+        "sectionHeading sectionHeading sectionHeading sectionHeading . sectionCopy sectionCopy sectionCopy sectionCopy sectionCopy sectionCopy ."
+        ;
+    }
+
+    .sectionHeading {
+        grid-area: sectionHeading;
+        align-self: start;
+        justify-self: right;
+        text-align: right;
+    }
+
+    .sectionCopy {
+        grid-area: sectionCopy;
+    }
     
 }
