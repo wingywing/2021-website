@@ -65,10 +65,22 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-family: 'HelveticaRoundedBold';
+    font-size: 20px;
+    color: var(--emphasis-color);
+}
+
 p {
     font-family: 'Helvetica';
-    font-size: 18;
-    color: var(--main-color)
+    font-size: 16px;
+    color: var(--emphasis-color);
+}
+
+.projectMain li {
+    font-family: 'Helvetica';
+    font-size: 16px;
+    color: var(--emphasis-color);
 }
 
 body {
@@ -79,7 +91,6 @@ a {
     text-decoration: none;
     color: var(--emphasis-color);
     font-family: 'Helvetica';
-    font-size: 1.4rem;
     -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
     -webkit-transition: color 0.3s ease-in-out;
@@ -201,7 +212,9 @@ a:hover {
             -webkit-transition: 0.3s ease-in-out;
             transition: 0.3s ease-in-out;
         }
-
+        nav ul li {
+            font-size: 1.4rem;
+        }
         .hamburger {
             margin: 0;
             padding: 0;
@@ -417,6 +430,22 @@ a:hover {
         .projHero {
             height: auto;
             width: 100%;
+        }
+
+        .projImg {
+            width: 100%;
+            grid-column: full-start / full-end;
+            margin: 0;
+            padding: 0;
+        }
+
+        .imgCaption {
+            color: var(--main-color);
+            font-size: .8rem;
+            font-style: italic;
+            padding: 0;
+            margin: 0;
+            text-align: center;
         }
 @media  screen and (min-width: 740px) {
         
