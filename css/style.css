@@ -427,7 +427,7 @@ a:hover {
             font-size: clamp(1rem, 1vw, 1.111rem);
         }
 
-        .projHero {
+        .projHero img{
             height: auto;
             width: 100%;
         }
