@@ -1,0 +1,168 @@
+<!doctype html>
+<!-- 
+    hi.
+    Coded with love by Wing Pang
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wing Pang - Shapes and Sounds</title>
+    <meta name="description" content="Motion graphic exercises.">
+    <meta name="author" content="Wing">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typefaces -->
+    <!-- ASAP - Used for logotype -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Helvetica Rounded -->
+    <script src="https://kit.fontawesome.com/c065e06c81.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Grid container -->
+    <div class="webgrid projectWebgrid">
+        <!-- Header and navbar - modified from https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci and https://www.a11ymatters.com/pattern/mobile-nav/-->
+        <header class="header">
+            <h1>
+                <a href="index.html" class="logo">Wing&nbsp;Pang</a>
+            </h1>
+
+            <button id="toggle" class="hamburger">
+                <p style="width:0px; height: 0px; color: transparent; padding: 0px; margin: 0px;">Menu</p>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="/design.html" class="activePage">Design</a></li>
+                    <li><a href="/illustration.html">Illustration</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main body container -->
+        <div class="projectMain">
+            <div class="projectHeading">
+                <button class="icon backIcon" aria-label="Back to Design"
+                    onclick="window.location.href='/design.html';">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h2 class="projectTitle projT">Shapes<br>and&nbsp;Sounds</h2>
+                <p class="projectSubtitle projSt">2021&nbsp;<br class="bigbreak">motion</p>
+            </div>
+            <div class="projHero full">
+                <div class="threeplayergrid">
+                        <video src="/videos/girls-dont-hoop.mp4" class="vid" type="video/mp4" controls></video>
+                        <video src="/videos/A Tale of Two Squares_WithSFX.mp4" class="vid" type="video/mp4" controls></video>
+                        <video src="/videos/WingPangFlower_WithAudio.mp4" class="vid" type="video/mp4" controls></video>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Overview
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        <b>Shapes and Sounds</b> is a collection of short motion graphic exercises made to convey stories 
+                        through only basic shapes accompanied by audio. The first animation (with the narration) uses a snippet of <i><b><a href="https://www.nytimes.com/2020/05/15/arts/denice-frohman-poem.html">Denice Frohman's self-narrated 
+                            poem: Lady&nbsp;Jordan</a></b></i>. 
+                    </p>
+                    <p>The squares animation and tangram flower animation has 
+                        audio that I've mixed myself, using sounds from royalty-free archives such as <b><i><a href="https://freesound.org/">FreeSound</a></i></b> and 
+                        <b><i><a href="https://freesfx.co.uk/">FreeSFX</a></i></b>. Some of the audio were self-recorded as&nbsp;well.
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Ideation and <br class="bigbreak">storyboarding
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        For each of the animations, a process of ideation and storyboarding was necessary to reach the final&nbsp;result.
+                    </p>
+                    <p>
+                        With the narrated piece featuring Frohman's <b>Lady Jordan</b>, the short stanza of the poem was analysed and annotated on
+                        to come up with visuals that can convey the tone and meaning of the poem. Since some parts of the snippet were 
+                        in Spanish, I also had to use a translation tool to understand the jist of its&nbsp;meaning. After that, a styleframe storyboard
+                        was created to be animated in After&nbsp;Effects.
+                    </p>
+                    <p>
+                        The squares animation and tangram flower animation had a less directed brief, so I started off with storyboarding
+                        the beats of the narratives. While I was animating the two videos, some parts of the storyboard were cut out. For 
+                        the squares animation, the retaliation of the larger square was removed to suggest a more filial relationship between
+                        the two shapes. Meanwhile, the flower animation originally featured a square sun in the background of the storyboard, but 
+                        was removed since it made the scene feel too&nbsp;cluttered.
+                    </p>
+                </div>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/shapes-and-sounds/01.png" alt="Screenshots of poem analysis and styleframe storyboarding for the narrated animation."></div>
+                <p class="imgCaption">
+                    Screenshots of poem analysis and styleframe storyboarding for the narrated&nbsp;animation.
+                </p>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/shapes-and-sounds/02.png" alt="Screenshots of storyboards for the squares animation and tangram flower exercise."></div>
+                <p class="imgCaption">
+                    Screenshots of storyboards for the squares animation and tangram flower&nbsp;exercise.
+                </p>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Technical research
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        While I was creating the animations for these videos, there were times where I had to search online for solutions
+                        to problems that I haven't faced&nbsp;before.
+                    </p>
+                    <p>
+                        In the squares animation, I had to research how I can create a <b>smear frame</b> without manually adjusting the curve. 
+                        From <b><i><a href="https://www.youtube.com/watch?v=sd4ekENw7XM">FLOWTUTS's Youtube video</a></i></b>, I learnt to use the <b>echo</b>
+                        effect to simulate a traditional&nbsp;smear.
+                    </p>
+                    <p>
+                        For both the squares and flower animation, a lot of research went into sound design. This involved finding resources for 
+                        public domain sounds and learning to use Premiere Pro instead of After Effects for faster live audio playback (honestly a 
+                        lifesaver since my workflow became heaps faster!).
+                    </p>
+                    <p>
+                        The audio for the squares animation was mostly inspired by old <b><i><a href="https://www.youtube.com/watch?v=CDdkC9T4qC0">Looney Tunes</a></i></b> and <i><b><a href="https://www.youtube.com/watch?v=b1C4rSoMKEw">Popeye the Sailor Man</a></b></i> animations. Particularly, the
+                        whistling exhale sound after a snore. On the other hand, I wanted the flower animation to have more of an elegant
+                        feeling. Thus, I used classical music as non-diegetic sound (the climax of <b><i><a href="https://www.youtube.com/watch?v=mBGkOF7rBDQ">Grieg - Peer Gynt Suite No 1: Morning Mood</a></i></b>),
+                        and subtle sound effects for the movement of the camera and tangram&nbsp;pieces.
+                    </p>
+                </div>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/shapes-and-sounds/03.png" alt="A collection of screenshots showing technical research of the three videos."></div>
+                <p class="imgCaption">
+                    A collection of screenshots showing technical research of the three videos.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer container -->
+        <footer class="footer ">
+            <p>Copyright ©
+                <script>document.write(new Date().getFullYear());</script> Wing Pang
+            </p>
+            <ul class="footer-list">
+                <li><a href="https://www.instagram.com/wing.png">Instagram</a> - </li>
+                <li><a href="https://au.linkedin.com/in/wingy">LinkedIn</a> - </li>
+                <li><a href="mailto:hello@wingpang.com">Email</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>
