@@ -363,6 +363,13 @@ a:hover {
             display: none;
         }
         /* ProjectPage */
+        .projectImg {
+            max-height: 40vh;
+            max-width: 70vw;
+            object-fit: cover;
+            align-self: flex-start;
+            justify-self: left;
+        }
         .projectWebgrid {
             grid-template-areas: 
             "header header header header header header"
@@ -489,6 +496,7 @@ a:hover {
         }
 
 @media  screen and (min-width: 740px) {
+    
     .threeplayergrid {
         flex-direction: row;
         max-width: 100vw;
@@ -672,7 +680,12 @@ a:hover {
         text-align: left;
     }
     /* design page */
-
+    .rotateleft {
+        transform: rotate(-1deg);
+    }
+    .rotateright {
+        transform: rotate(1deg);
+    }
     .projectgrid {
         font-size: 4.444rem;
         display: grid;
@@ -688,10 +701,15 @@ a:hover {
         align-items: flex-end;
         margin: 1rem 0 6rem 0;
         grid-auto-rows: min-content;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
     }
 
     .projectlist {
         grid-area: list;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
     .projectlist ol li::marker{
         font-size: clamp(1.8rem, 4vw, 4.444rem);
@@ -703,6 +721,13 @@ a:hover {
     }
     .projectImg {
         grid-area: img;
+        max-width: 40vw;
+        max-height: 175px;
+        border-radius: 1rem;
+        position: relative;
+        display: none;
+        -webkit-box-shadow: 5px 5px 21px -3px rgba(0,0,0,0.1); 
+        box-shadow: 5px 5px 21px -3px rgba(0,0,0,0.1);
     }
     .projectTitle {
         padding-top: 0;
