@@ -722,7 +722,7 @@ a:hover {
     .projectImg {
         grid-area: img;
         max-width: 40vw;
-        max-height: 175px;
+        max-height: 170px;
         border-radius: 1rem;
         position: relative;
         display: none;

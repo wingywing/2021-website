@@ -1,7 +1,11 @@
+var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
 $(document).ready(function(){
-	$('.projLink').mouseover(function() {
-  		myvar = this.id;
-  		$(".projectImg").fadeOut("50", "swing");
-   		$('#div'+myvar).fadeIn("100", "swing");
-	});
+    if (width > 992) {
+        $('.projLink').mouseover(function() {
+            myvar = this.id;
+            $(".projectImg").fadeOut("50", "swing");
+             $('#div'+myvar).fadeIn("100", "swing");
+             
+      });
+    }
 });
