@@ -494,9 +494,37 @@ a:hover {
             0 41.8px 33.4px rgba(0, 0, 0, 0.086),
             0 100px 80px rgba(0, 0, 0, 0.12)
         }
-
+        /* Illustration page */
+        .illustrationGrid {
+            display: grid;
+            grid-column: full-start / full-end;
+            gap: 0px;
+            margin-bottom: 1rem;
+        }
+        .illustrationImg {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
 @media  screen and (min-width: 740px) {
-    
+    .illustrationGrid {
+        grid-column: main-start / main-end;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .illustrationCell {
+        box-shadow: inset 0px 3px 6px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    .illustrationImg {
+        border-radius: 40px;
+        position: relative;
+        z-index: -2;
+    }
     .threeplayergrid {
         flex-direction: row;
         max-width: 100vw;
@@ -813,5 +841,7 @@ a:hover {
         grid-area: sectionCopy;
     }
 
-
+    .illustrationGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
