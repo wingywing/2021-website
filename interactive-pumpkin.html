@@ -1,0 +1,188 @@
+<!doctype html>
+<!-- 
+    hi.
+    Coded with love by Wing Pang
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wing Pang - Interactive Pumpkin</title>
+    <meta name="description" content="p5.js interactive code.">
+    <meta name="author" content="Wing">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typefaces -->
+    <!-- ASAP - Used for logotype -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Helvetica Rounded -->
+    <script src="https://kit.fontawesome.com/c065e06c81.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+</head>
+
+<body>
+    <!-- Grid container -->
+    <div class="webgrid projectWebgrid">
+        <!-- Header and navbar - modified from https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci and https://www.a11ymatters.com/pattern/mobile-nav/-->
+        <header class="header">
+            <h1>
+                <a href="index.html" class="logo">Wing&nbsp;Pang</a>
+            </h1>
+
+            <button id="toggle" class="hamburger">
+                <p style="width:0px; height: 0px; color: transparent; padding: 0px; margin: 0px;">Menu</p>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="/design.html" class="activePage">Design</a></li>
+                    <li><a href="/illustration.html">Illustration</a></li>
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main body container -->
+        <div class="projectMain">
+            <div class="projectHeading">
+                <button class="icon backIcon" aria-label="Back to Design"
+                    onclick="window.location.href='/design.html';">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h2 class="projectTitle projT">Interactive<br>Pumpkin</h2>
+                <p class="projectSubtitle projSt">2021&nbsp;<br class="bigbreak">p5.js</p>
+            </div>
+            <div class="projHero full">
+                <div class="threeplayergrid">
+                    <div class="pumpkindiv">
+                        <p class="imgCaption" style="color: var(--emphasis-color); padding-bottom:1em; font-size: 1em;"><b>Click me!</b> <br> 
+                            Please use Firefox if you're on iOS <br> (Mobile Safari is bugged)</br></p>
+                        <iframe class="p5js-iframe" src="/images/interactive-pumpkin/pumpkin.html" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Overview
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        <b>Interactive Pumpkin</b> is a simple Halloween-themed interactive piece coded through <b><i><a href="https://p5js.org/">p5.js</a></i></b>. 
+                        It features a cartoon Jack-O-Lantern that lights up when you click on&nbsp;it.
+                    </p>
+                    <p>The colours I've chosen for this piece was referenced off a previous artwork that I've done for Halloween in 2020. That artwork 
+                        involved a similar Jack-O-Lantern that was animated to light&nbsp;up.
+                    </p>
+                </div>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/interactive-pumpkin/01.png" alt="My 2020 Halloween illustration."></div>
+                <p class="imgCaption">
+                    Image of my 2020 Halloween illustration.
+                </p>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Sketches
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        Before I started coding the illustration in p5.js, I did some mindmapping and sketches to see what stylistic choices were most viable. My 
+                        original pumpkin drawing had too many edges on the mouth of the Jack-O-Lantern. It also had an irregular bezier shape for the stem of the 
+                        pumpkin, which made it difficult to recreate in&nbsp;p5.js.
+                    </p>
+                    <p>
+                        I decided that I needed to simplify elements of the illustration to make it more efficient. This meant using mainly plain ovals, rounded rectangles, circles
+                         and&nbsp;triangles.
+                    </p>
+                </div>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/interactive-pumpkin/02.png" alt="Scanned sketchnotes of my iteration process."></div>
+                <p class="imgCaption">
+                    Scanned sketchnotes of my iteration process.
+                </p>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Research and <br class="bigbreak">rationale
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        Not a lot of research was required for this piece since it was simple and straightforward. I did however, use 
+                        the <b><i><a href="https://p5js.org/reference/">p5.js reference page</a></i></b> to achieve the final result. The reason why I went for the Jack-O-Lantern
+                        graphic was because it was a class exercise which took place around mid&nbsp;October.
+                    </p>
+                    <p>
+                        In the process of creating the triangular mouth and thunderbolt background, I had to add an extra line of code 
+                        which showed where the cursor was on screen (with x and y&nbsp;coordinates). 
+                    </p>
+                    <p>
+                        In order to embed the p5.js canvas onto this page, I had to import the libraries into my IDE (VSCode) to make it local, since the iframe embed from
+                        p5.js's web editor requires a https secure connection to function (UTS's student servers aren't https secured).
+                    </p>
+                    <p><b><i><a href="https://www.youtube.com/watch?v=vj9nDja8ZdQ">Tim Rodenbröker's Youtube video</a></i></b> helped 
+                        since <b><i><a href="https://marketplace.visualstudio.com/items?itemName=samplavigne.p5-vscode">Sam Lavigne's p5.vscode extension</a></i></b> made it easy to set up 
+                        a new p5.js canvas where I can copy and paste the code I've made in the web editor. I embedded the canvas using a local&nbsp;iframe.</p>
+                    <p>
+                        Unfortunately, embedding the p5.js canvas in an iframe seems to have problems with interaction for iOS devices using Safari.
+                    </p>
+                </div>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/interactive-pumpkin/03.png" alt="Decorative screenshots of research sites."></div>
+                <p class="imgCaption">
+                    Screenshots of research sites.
+                </p>
+            </div>
+            <div class="projImg">
+                <div class="shadow"><img class="projImg" src="/images/interactive-pumpkin/04.png" alt="Screenshots of the complete Jack-o-Lantern before and after a click interaction."></div>
+                <p class="imgCaption">
+                    Screenshots of the complete Jack-o-Lantern before and after a click interaction.
+                </p>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    p5.js<br class="bigbreak"> project link
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        If you're on iOS Safari and don't want to install Firefox for iOS, feel free to open the original p5.js project here: <br>
+                        <a href="https://editor.p5js.org/tsz.w.pang/full/V5tOCsPOZ"><b><i>editor.p5js.org/tsz.w.pang/full/V5tOCsPOZ</i></b></a>
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Project widget <br class="bigbreak">(Interaction doesn't <br class="bigbreak"> work on mobile)
+                </h3>
+                <div class="sectionCopy">
+                    <script type="text/p5" src="/images/interactive-pumpkin/pumpkin.js" data-preview-width="400" data-height="400"></script>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer container -->
+        <footer class="footer ">
+            <p>Copyright ©
+                <script>document.write(new Date().getFullYear());</script> Wing Pang
+            </p>
+            <ul class="footer-list">
+                <li><a href="https://www.instagram.com/wing.png">Instagram</a> - </li>
+                <li><a href="https://au.linkedin.com/in/wingy">LinkedIn</a> - </li>
+                <li><a href="mailto:hello@wingpang.com">Email</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>
