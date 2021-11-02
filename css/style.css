@@ -46,6 +46,10 @@
     color: var(--emphasis-color);
 }
 
+#divone {
+    opacity: 100%;
+}
+
 .logo {
     font-family: 'Asap';
     font-size: 1.667rem;
