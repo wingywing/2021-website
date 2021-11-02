@@ -839,7 +839,8 @@ a:hover {
         max-height: 170px;
         border-radius: 1rem;
         position: relative;
-        display: none;
+        opacity: 20%;
+        /* display: none; */
         -webkit-box-shadow: 5px 5px 21px -3px rgba(0,0,0,0.1); 
         box-shadow: 5px 5px 21px -3px rgba(0,0,0,0.1);
     }
