@@ -42,6 +42,8 @@
     --light-color: #EEEEEE;
     background-color: var(--bg-color);
     font-size: 18px;
+    font-family: 'Helvetica';
+    color: var(--emphasis-color);
 }
 
 .logo {
@@ -275,6 +277,22 @@ a:hover {
             -webkit-transition: 0.3s ease-in-out;
             transition: 0.3s ease-in-out;
         }
+        .socials {
+            margin: 0px;
+            padding: 2rem 0 0 0;
+            text-align: center;
+            white-space:nowrap
+        }
+        .socials li {
+            font-style: normal;
+            list-style-type: none;
+            display: inline-block;
+            font-family: 'HelveticaRoundedBold';
+            font-size: 1.111rem;
+            color: var(--emphasis-color);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
         .icon {
             background-color: transparent;
             border: none;
@@ -495,6 +513,11 @@ a:hover {
             0 100px 80px rgba(0, 0, 0, 0.12)
         }
         /* Illustration page */
+        
+        .home-right {
+            grid-area: right;
+            grid-column: main-start / main-end;
+        }
         .illustrationGrid {
             display: grid;
             grid-column: full-start / full-end;
@@ -506,6 +529,60 @@ a:hover {
             padding: 0;
             margin: 0;
             display: block;
+            position: relative;
+        }
+        /* about page */
+        .aboutmain {
+            display: grid;
+            grid-template-columns: 
+                [full-start] /* Full represents images that break out of the center grid*/
+                2.056rem 
+                [main-start]
+                repeat(4, 1fr) 
+                [main-end]
+                2.056rem
+                [full-end];
+            gap: 10px;
+            margin: 0;
+            grid-template-areas: 
+                " left left left left left left "
+                " . right right right right . "
+                ;
+            min-height: 100vh;
+            grid-column: full-start / full-end;
+        }
+
+        .aboutmain > * {
+            grid-column: main-start / main-end;
+        }
+
+        .aboutmain > .full {
+            grid-column: full-start / full-end;
+        }
+
+        .about-left {
+            grid-column: full-start / full-end;
+            text-align: center;
+            grid-area: left;
+        }
+        .about-right {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .me {
+            display: block;
+            width: 100%;   
+            max-height: 100%;
+        }
+        .myemail {
+            font-size: clamp(1rem, 7vw, 2rem);
+            display: inline-block;
+            font-family: 'HelveticaRoundedBold';
+            color: var(--emphasis-color);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            text-align: center;
+            margin-top: 2rem;
         }
 @media  screen and (min-width: 740px) {
     .illustrationGrid {
@@ -516,9 +593,8 @@ a:hover {
         margin-bottom: 2rem;
     }
     .illustrationCell {
-        box-shadow: inset 0px 3px 6px 0 rgba(0, 0, 0, 0.10);
         border-radius: 40px;
-        z-index: 1;
+        box-shadow: inset 0px 3px 6px 0 rgba(0, 0, 0, 0.10);
     }
     .illustrationImg {
         border-radius: 40px;
@@ -595,6 +671,13 @@ a:hover {
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
     }
+
+    .socials li {
+        font-size: 1.944rem;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    
     nav ul li a {
         font-size: 1.111rem;
         padding: .7rem 1.5rem .7rem 1.5rem;
@@ -650,6 +733,9 @@ a:hover {
     .projectHeading {
         margin: 3.5rem 0 2rem 0;
     } 
+    .mecontainer {
+        margin-top: 2rem;
+    }
     
 }
 @media  screen and (min-width: 992px) {
@@ -843,5 +929,52 @@ a:hover {
 
     .illustrationGrid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    /* About page */
+    .about-right {
+        grid-area: right;
+    }
+
+    .about-right h3 {
+        text-align: left;
+    }
+
+    .aboutmain {
+        display: grid;
+        grid-template-columns: 
+            [main-start]
+            repeat(12, 1fr) 
+            [main-end];
+        gap: 16px;
+        margin: 0;
+        padding-top: 0;
+        grid-template-areas: 
+        "  . . left left left . right right right right . .  "
+        ;
+        grid-area: main;
+        align-items: center;
+        grid-column: main-start / main-end;
+    }
+    .mecontainer {
+        box-shadow: inset 0px 3px 6px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 40px;
+    }
+    .me {
+        object-fit: contain;
+        border-radius: 40px;
+        position: relative;
+        z-index: -1;
+    }
+    .socials {
+        text-align: left;
+        font-size: 1.9vw;
+    }
+    .myemail {
+        text-align: left;
+        font-size: 1.9vw;
+    }
+    .about-left {
+        text-align: left;
+        object-fit: contain;
     }
 }
