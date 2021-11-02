@@ -15,10 +15,10 @@
 var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
 $(document).ready(function(){
     if (width > 992) {
-        $('.projLink').mouseover(function() {
+        $('.projectgrid').mouseover(function() {
             myvar = this.id;
-            $(".projectImg").fadeTo("fast", .20);
-            $('#div'+myvar).fadeTo("fast", 1.0);
-      });
+            $(".projectImg").stop().fadeTo("fast", .20);
+            $('#div'+myvar).stop().fadeTo("fast", 1.0);
+        });
     }
 });

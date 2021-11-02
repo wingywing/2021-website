@@ -391,6 +391,7 @@ a:hover {
             object-fit: cover;
             align-self: flex-start;
             justify-self: left;
+            cursor: pointer;
         }
         .projectWebgrid {
             grid-template-areas: 
