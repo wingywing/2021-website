@@ -473,7 +473,7 @@ a:hover {
             color: var(--main-color);
             font-size: .8rem;
             font-style: italic;
-            padding: 0;
+            padding: 0 2rem 1rem 2rem;
             margin: 0;
             text-align: center;
         }
