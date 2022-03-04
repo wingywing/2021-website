@@ -1,11 +1,6 @@
-var videos = document.getElementsByTagName("video"),
+var video = document.getElementById("video"),
 fraction = 0.8;
 function checkScroll() {
-
-    for(var i = 0; i < videos.length; i++) {
-
-        var video = videos[i];
-
         var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
             b = y + h, //bottom
             visibleX, visibleY, visible;
@@ -17,9 +12,9 @@ function checkScroll() {
 
             if (visible > fraction) {
                 video.play();
+            } else {
+                video.pause();
             }
-
-    }
 
 }
 

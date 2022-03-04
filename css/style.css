@@ -938,19 +938,24 @@ a:hover {
         ;
     }
 
-
-
     .sectionHeading {
         grid-area: sectionHeading;
         align-self: start;
         justify-self: right;
         text-align: right;
     }
-
     .sectionCopy {
         grid-area: sectionCopy;
     }
 
+    .webtoonStrip {
+        width: 100%;
+        
+    }
+    .webtoonContainer {
+        width: 100%;
+        grid-column: full-start / full-end;
+    }
     .illustrationGrid {
         grid-template-columns: repeat(4, 1fr);
     }
