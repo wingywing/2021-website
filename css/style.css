@@ -107,6 +107,7 @@ a:hover {
     color: var(--main-color)
 }
 
+
 /* Mobile site */
 
     /* Grid container - Modified code from https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/ */
@@ -469,6 +470,7 @@ a:hover {
             padding: 0;
         }
 
+
         .imgCaption {
             color: var(--main-color);
             font-size: .8rem;
@@ -741,7 +743,21 @@ a:hover {
     .mecontainer {
         margin-top: 2rem;
     }
-    
+    .webtoonContainer {
+        object-fit: contain;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 
+        ". . . toonImg toonImg toonImg toonImg toonImg toonImg . . ."
+        ;
+    }
+
+    .webtoonStrip {
+        grid-area: toonImg;
+        object-fit: contain;
+        display: block;
+        width: 100%;
+    }
 }
 @media  screen and (min-width: 992px) {
     .bigbreak {
@@ -921,6 +937,8 @@ a:hover {
         "sectionHeading sectionHeading sectionHeading sectionHeading . sectionCopy sectionCopy sectionCopy sectionCopy sectionCopy sectionCopy ."
         ;
     }
+
+
 
     .sectionHeading {
         grid-area: sectionHeading;
