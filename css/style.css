@@ -881,6 +881,12 @@ a:hover {
     color:var(--main-color);
     }
     
+    .projectMain {
+        gap: 0px;
+    }
+    .sectionCopy {
+        margin-bottom: 0px;
+    }
 
     /* project page */
     .projT{
