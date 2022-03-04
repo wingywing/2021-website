@@ -17,8 +17,6 @@ function checkScroll() {
 
             if (visible > fraction) {
                 video.play();
-            } else {
-                video.pause();
             }
 
     }
