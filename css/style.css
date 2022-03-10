@@ -121,7 +121,6 @@ a:hover {
                 [main-end]
                 2.056rem
                 [full-end];
-            gap: 10px;
             margin: 0;
             grid-template-areas: 
             "header header header header header header"
@@ -413,7 +412,6 @@ a:hover {
             [main-end]
             2.056rem
             [full-end];
-        gap: 10px;
         margin: 0;
         }
 
@@ -482,6 +480,10 @@ a:hover {
 
         .projectMain {
             padding-bottom: 3rem;
+        }
+
+        .webtoonContainer {
+            display: flex;
         }
 
         .threeplayergrid {
@@ -961,7 +963,7 @@ a:hover {
     .webtoonContainer {
         width: 100%;
         grid-column: full-start / full-end;
-        display: flex;
+        display: grid;
     }
     .illustrationGrid {
         grid-template-columns: repeat(4, 1fr);
