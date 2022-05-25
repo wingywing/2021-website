@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- 
+    hi.
+    Coded with love by Wing Pang
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wing Pang - The Crow</title>
+    <meta name="description" content="A motion graphic adaptation of a snippet of Uncle Greg's The Crow.">
+    <meta name="author" content="Wing">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Typefaces -->
+    <!-- ASAP - Used for logotype -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Helvetica Rounded -->
+    <script src="https://kit.fontawesome.com/c065e06c81.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Grid container -->
+    <div class="webgrid projectWebgrid">
+        <!-- Header and navbar - modified from https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci and https://www.a11ymatters.com/pattern/mobile-nav/-->
+        <header class="header">
+            <h1>
+                <a href="index.html" class="logo">Wing&nbsp;Pang</a>
+            </h1>
+
+            <button id="toggle" class="hamburger">
+                <p style="width:0px; height: 0px; color: transparent; padding: 0px; margin: 0px;">Menu</p>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="./design.html" class="activePage">Design</a></li>
+                    <li><a href="./illustration.html">Illustration</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main body container -->
+        <div class="projectMain">
+            <div class="projectHeading">
+                <button class="icon backIcon" aria-label="Back to Design"
+                    onclick="window.location.href='/design.html';">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <h2 class="projectTitle projT">The Crow</h2>
+                <p class="projectSubtitle projSt">2022&nbsp;<br class="bigbreak">motion</p>
+            </div>
+            <div class="projHero full">
+                <video src="images/the-crow/00.mp4" type="video/mp4" style="width:100%" controls></video>
+            </div>
+            <div class="section">
+                <h3 class="sectionHeading">
+                    Overview
+                </h3>
+                <div class="sectionCopy">
+                    <p>
+                        A motion graphic adaptation of a segment of Uncle Greg’s story–The Crow.<br><br>This piece utilises hand drawn imagery that resembles traditional ink drawings while alluding to the native flora found in La Perouse. The imagery of eucalyptus leaves also resemble the dark feathers of the crow after it has been burnt in the story. Meanwhile, the inky watercolour style was inspired by La Perouse’s history in the involvement with underwater telecommunication&nbsp;cables.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer container -->
+        <footer class="footer ">
+            <p>©  <script>document.write( new Date().getFullYear() );</script> Coded with love by Wing Pang</p>
+            <ul class="footer-list">
+                <li><a href="https://www.instagram.com/wing.png">Instagram</a> - </li>
+                <li><a href="https://au.linkedin.com/in/wingy">LinkedIn</a> - </li>
+                <li><a href="mailto:hello@wingpang.com">Email</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>
