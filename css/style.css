@@ -925,6 +925,11 @@ a:hover {
         z-index: -2;
     }
 
+    .ss-img {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
     .projectHero {
         margin-bottom: 3rem;
     }
