@@ -111,6 +111,7 @@ a:hover {
 /* Mobile site */
 
     /* Grid container - Modified code from https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/ */
+    
         .webgrid {
             display: grid;
             grid-template-columns: 
@@ -130,9 +131,55 @@ a:hover {
             min-height: 100vh;
         }
 
+        .wip-popup {
+            .white-bg {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                background-color: white;
+                padding: 4rem;
+                border-radius: 1rem;
+                margin: 1rem;
+            }
+            .button-style {
+                font-size: 16px;
+                background-color: #EEEEEE;
+                border: none;
+                color: grey;
+                padding: .5rem 1rem;
+                border-radius: 99px;
+                transition: all, .5s;
+                
+            }
+            .button-link {
+                background-color: antiquewhite;
+                color: #706F6F;
+            }
+            .button-style:hover {
+                background-color: rgb(229, 216, 202);
+            }
+            text-wrap: balance;
+            text-align: center;
+            position: absolute;
+            width: 100dvw;
+            height: 100dvh;
+            background-color: #aaa8a590;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wip-popup p {
+            margin-block: .5rem;
+            margin-inline: 0;
+        }
+
         .webgrid > * {
             grid-column: main-start / main-end;
         }
+
 
         .webgrid > .full {
             grid-column: full-start / full-end;
